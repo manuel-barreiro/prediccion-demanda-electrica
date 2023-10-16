@@ -10454,3 +10454,34 @@ dtype: int64}]))),
                 ('actual_estimator',
                  LGBMRegressor(n_jobs=-1, random_state=1234))])
 2023-10-15 22:59:46,292:INFO:finalize_model() successfully completed......................................
+2023-10-15 23:22:21,817:INFO:Initializing predict_model()
+2023-10-15 23:22:21,818:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x00000291D1576AD0>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['year', 'Series', 'day_of_year',
+                                             'dolar_oficial', 'temperature_C'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['month', 'day_of_week',
+                                             'is_working'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 Tr...
+                                                               handle_missing='return_nan',
+                                                               mapping=[{'col': 'is_working',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}]))),
+                ('onehot_encoding',
+                 TransformerWrapper(include=['month', 'day_of_week'],
+                                    transformer=OneHotEncoder(cols=['month',
+                                                                    'day_of_week'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('actual_estimator',
+                 LGBMRegressor(n_jobs=-1, random_state=1234))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x00000291BDF8BC70>)
+2023-10-15 23:22:21,818:INFO:Checking exceptions
+2023-10-15 23:22:21,818:INFO:Preloading libraries
+2023-10-15 23:22:21,823:INFO:Set up data.
+2023-10-15 23:22:21,828:INFO:Set up index.
